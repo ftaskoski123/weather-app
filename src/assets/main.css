@@ -1,7 +1,0 @@
-@import './base.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* body{
-    background: linear-gradient(to bottom, #e9defa, #fbfcdb);
-} */
