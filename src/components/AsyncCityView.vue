@@ -151,7 +151,7 @@ const getWeatherData = async (): Promise<any> => {
 const weatherData = await getWeatherData();
 
 const removeCity = (): void => {
-const cities= JSON.parse(localStorage.getItem("savedCities") as any);
+const cities= JSON.parse(localStorage.getItem("savedCities") as string);
 const updatedCities = cities.filter((city: any) => city.id !== route.query.id);
 
 localStorage.setItem("savedCities", JSON.stringify(updatedCities));
