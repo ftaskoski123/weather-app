@@ -68,9 +68,7 @@
               :src="`http://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`"
               alt=""
             />
-            <p class="text-xl">
-              {{ Math.round(hour.temp) }}&deg;
-            </p>
+            <p class="text-xl">{{ Math.round(hour.temp) }}&deg;</p>
           </div>
         </div>
       </div>
@@ -89,19 +87,14 @@
         >
           <p class="flex-1">
             {{
-              new Date(day.dt * 1000).toLocaleDateString(
-                "en-us",
-                {
-                  weekday: "long",
-                }
-              )
+              new Date(day.dt * 1000).toLocaleDateString("en-us", {
+                weekday: "long",
+              })
             }}
           </p>
           <img
             class="w-[50px] h-[50px] object-cover"
-            :src="
-              `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
-            "
+            :src="`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`"
             alt=""
           />
           <div class="flex gap-2 flex-1 justify-end">
@@ -111,15 +104,23 @@
         </div>
       </div>
     </div>
-  </div>
 
+    <div
+      class="flex items-center gap-2 py-12 text-white cursor-pointer duration-150 hover:text-red-500"
+      @click="removeCity"
+    >
+      <i class="fa-solid fa-trash"></i>
+      <p>Remove City</p>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import axios from "axios";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
+const router = useRouter();
 
 const getWeatherData = async (): Promise<any> => {
   try {
@@ -146,7 +147,16 @@ const getWeatherData = async (): Promise<any> => {
 
 const weatherData = await getWeatherData();
 
-console.log(weatherData);
+const removeCity = (): void => {
+const cities= JSON.parse(localStorage.getItem("savedCities") as any);
+const updatedCities = cities.filter((city: any) => city.id !== route.query.id);
+
+localStorage.setItem("savedCities", JSON.stringify(updatedCities));
+router.push({ name: "home" });
+
+};
+
+
 </script>
 
 <style scoped>
@@ -160,12 +170,11 @@ console.log(weatherData);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #888; 
+  background-color: #888;
 }
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 3px;
 }
-
 </style>
