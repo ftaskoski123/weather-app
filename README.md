@@ -1,40 +1,51 @@
-# weather-app
+# Weather Forcast 🌦️
 
-This template should help get you started developing with Vue 3 in Vite.
+Weather Forcast is a user-friendly weather app that empowers you to stay informed about the weather conditions in any city. With a clean and intuitive interface, it provides a range of features to keep you prepared for any weather.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **City Search:**  Easily search for weather information in any city around the world.
+- **Weather Overview:** View a concise overview of the current weather conditions, including temperature, humidity, wind speed, and more.
+- **Hourly Weather:** Access detailed hourly weather forecasts to help plan your day effectively.
+- **Weekly Weather:** Get a 7-day weather forecast to plan your week ahead, including temperature trends and expected rainfall.
+- **Save Cities:** Save your favorite cities for quick and easy access.
+- **Remove Saved Cities:** Manage your saved cities list by removing cities you no longer need, keeping it organized and clutter-free.
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Getting Started
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+To get started with the project, follow these steps:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. **Clone the Repository:**
 
-## Customize configuration
+   Clone this repository to your local machine using the following command:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+   ```bash
+   git clone https://github.com/ftaskoski123/survey-project.git
 
-## Project Setup
+Replace yourusername with your actual GitHub username.
 
-```sh
-npm install
+2.**Navigate to the Project Directory:**
+
+Open a terminal or command prompt and navigate to the project directory
+
+3.**Install Dependencies:**
+
+Install the project dependencies by running the following command:
+```bash
+npm install 
 ```
 
-### Compile and Hot-Reload for Development
+This command will download and install the necessary packages.
 
-```sh
+4.**Start the Development Server:**
+
+Start the "Find a Coach" application on your local machine with this command:
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The app will be accessible in your web browser at http://localhost:5173 (or another port if specified).
 
-```sh
-npm run build
-```
+## Explore and Stay Prepared
+Explore the world's weather conditions with WeatherNow, and ensure you're always prepared for your adventures, no matter where they take you. Discover and stay informed by checking it out [here](https://ft-local-weather.netlify.app/).
